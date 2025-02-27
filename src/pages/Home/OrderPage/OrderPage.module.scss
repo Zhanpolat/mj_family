@@ -1,0 +1,200 @@
+.orders {
+    padding: 10px 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+
+    &>div {
+        z-index: 2;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: auto;
+        position: relative;
+
+        &>div {
+            height: auto;
+        }
+
+        &>div:first-child {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 10px;
+
+            &>div {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                padding: 20px 60px;
+                cursor: pointer;
+
+                &>button {
+                    border: none;
+                    background-color: transparent;
+
+                }
+            }
+        }
+
+        &>div:last-child {
+            padding: 40px 50px;
+        }
+    }
+}
+
+.kabina {
+    background-image: url('../../../assets/Kabina-img/Кабина.png');
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('../../../assets/Kabina-img/Общий\ зал-1.png');
+        pointer-events: none;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+}
+
+.zal {
+    background-image: url('../../../assets/Kabina-img/Общий\ зал.png');
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0px;
+        right: 0;
+        bottom: 0;
+        background-image: url('../../../assets/Kabina-img/Кабина-1.png');
+        pointer-events: none;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+
+    &>div {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.show_hide {
+    transition: all 400ms;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: -999;
+    height: 0;
+    transition: all 400ms;
+}
+
+.show_hide.show {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+    z-index: 1;
+    height: auto;
+}
+
+@media only screen and (max-width: 450px) {
+    .orders>div {
+        background-size: contain;
+
+        &::after {
+            background-size: contain;
+        }
+
+        &>div:first-child {
+            padding: 5px !important;
+            grid-template-columns: 2fr 2fr 1fr !important;
+        }
+    }
+
+    .zal,
+    .kabina {
+        background-image: none;
+
+        &::after {
+            background-image: none;
+        }
+    }
+
+    .zal {
+        background-image: url('../../../assets/Kabina-img/zal_mini.png') !important;
+
+        &::after {
+            background-image: url('../../../assets/Kabina-img/kabina_mini.png') !important;
+            opacity: 0.5;
+        }
+    }
+
+    .kabina {
+        background-image: url('../../../assets/Kabina-img/kabina-mini.png') !important;
+
+        &::after {
+            background-image: url('../../../assets/Kabina-img/zal-mini.png') !important;
+            opacity: 0.5;
+        }
+    }
+
+    .zal_btn {
+        display: none !important;
+    }
+
+    .orders {
+        margin: 0px;
+        position: relative;
+        padding: 6px 0px !important;
+
+        &>div>div:last-child {
+            padding: 10px 15px !important;
+
+            &>div {
+                flex-direction: column;
+                position: relative;
+            }
+        }
+    }
+
+    .btn_wrap {
+        padding: 8px 15px !important;
+
+        &>button {
+            font-size: 14px !important;
+            line-height: 17px !important;
+        }
+    }
+
+
+    .noBack {
+        background-image: none !important;
+
+        &::after,
+        &::before {
+            background-image: none !important;
+        }
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+        gap: 0px;
+
+        &>div {
+            &:first-of-type {
+                order: 2;
+            }
+        }
+    }
+}

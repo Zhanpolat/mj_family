@@ -1,0 +1,167 @@
+.admin {
+
+
+    &>header {
+        padding: 0px 20px;
+        position: sticky;
+        z-index: 999;
+        top: -0.01px;
+        background-color: rgb(255, 244, 230);
+
+        &>div {
+            padding: 10px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &>div,
+            &>div>div {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 15px;
+
+                &>div>div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: end;
+                    justify-content: space-between;
+                    gap: 5px;
+
+                    &>h1 {
+                        color: rgba(0, 0, 0, 1);
+                        font-size: 24.75px;
+                        line-height: 29.95px;
+                        font-weight: 400;
+                    }
+
+                    &>p {
+                        font-size: 14.7px;
+                        font-weight: 300;
+                        line-height: 17.79px;
+                    }
+
+                    &:last-child {
+                        border-radius: 100px;
+                        border: 1px solid #333;
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+    }
+
+    &>div {
+        display: grid;
+        grid-template-columns: 1fr 2.3fr;
+        align-items: start;
+        gap: 20px;
+
+        &.mini {
+            grid-template-columns: 1fr 11fr;
+        }
+
+        &>aside {
+            position: relative;
+            padding: 0px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+
+            &>ul {
+                height: 100%;
+                padding: 10px 0px;
+                position: fixed;
+                left: 0;
+                border-right: 1px solid rgba(127, 57, 39, 1);
+
+                &>div {
+                    padding: 10px 25px;
+                    display: flex;
+                    align-items: end;
+                    justify-content: flex-start;
+
+                    &>button {
+                        padding: 10px 20px 10px 5px ;
+                        margin-top: 80px;
+                        background-color: transparent;
+                        border: none;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 40px;
+                        color: rgba(177, 177, 177, 1);
+
+                        &>svg {
+                            transform: rotate(-180deg);
+                        }
+                    }
+                }
+
+                &>li {
+                    position: relative;
+
+                    &.li_active {
+                        &::after {
+                            content: '';
+                            display: block;
+                            width: auto;
+                            height: 100%;
+                            padding: 5px;
+                            background-color: rgba(127, 57, 39, 1);
+                            position: absolute;
+                            top: 50%;
+                            left: 0px;
+                            transform: translateY(-50%);
+                            border-top-right-radius: 10px;
+                            border-bottom-right-radius: 10px;
+                        }
+
+                        &>a {
+                            color: rgba(127, 57, 39, 1);
+
+                        }
+                    }
+
+                    &>a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 10px;
+                        color: rgba(177, 177, 177, 1);
+                        text-decoration: none;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        padding: 10px 35px;
+                    }
+
+                    &:first-of-type {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        padding: 10px 0px;
+
+                        &>button {
+                            background-color: rgba(127, 57, 39, 1);
+                            border: none;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 10px 2px;
+                            border-top-left-radius: 10px;
+                            border-bottom-left-radius: 10px;
+                            color: #fff;
+                            cursor: pointer;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+
+}

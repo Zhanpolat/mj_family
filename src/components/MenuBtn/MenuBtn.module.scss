@@ -1,0 +1,65 @@
+.btn_wrap,
+.orders_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 5px 25px;
+    margin-bottom: 43px;
+
+    &>button {
+        width: 100%;
+        padding: 14px 0px;
+        background-color: transparent;
+        border-radius: 9px;
+        border: none;
+        color: rgba(0, 0, 0);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        cursor: pointer
+    }
+}
+
+.orders_wrap {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 0.5fr;
+    gap: 100px;
+}
+
+.btn_wrap>button {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12.55px;
+    font-weight: 400;
+    line-height: 15.19px;
+}
+
+@media only screen and (max-width: 450px) {
+
+    .btn_wrap,
+    .orders_wrap {
+        overflow: scroll;
+        scrollbar-width: none;
+        padding: 10px 0px;
+        margin-bottom: 5px;
+        gap: 15px;
+
+        &>button {
+            width: 90px;
+            height: 30px;
+            font-size: 8px;
+            line-height: 10px;
+            text-align: center;
+            flex-shrink: 0;
+            text-align: center;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 0.5px solid rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .orders_wrap>button {
+        border: none;
+    }
+}

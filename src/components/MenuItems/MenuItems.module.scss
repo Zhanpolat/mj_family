@@ -1,0 +1,173 @@
+.meale,
+.meal_orders {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+
+    &>div {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        gap: 5px;
+        background-image: url('../../assets/Subtract.png');
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-size: contain;
+        padding: 0px 10px;
+
+        &>div {
+            height: 226px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            &:last-child {
+                justify-content: center;
+                padding: 0px;
+
+                &>img {
+                    margin-bottom: 5px;
+                    width: 144px;
+                    height: 144px;
+                    object-fit: cover;
+                    border-radius: 100px;
+                }
+            }
+
+            &>div {
+                padding: 10px 0px;
+
+                &>h1 {
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 31.2px;
+                    text-align: center;
+                    margin-bottom: 23px;
+                }
+
+                &>p {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 16.8px;
+                    color: rgba(171, 187, 194, 1);
+                }
+            }
+
+            &>h3 {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 26px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px 0px;
+            }
+        }
+    }
+}
+
+.back_meal {
+    background-image: none;
+    background-image: url('../../assets/menu-img/Subtract\ \(4\).png') !important;
+
+    &>div {
+        &>div {
+            &>h1 {
+                color: #fff;
+            }
+
+            &>p {
+                color: rgba(171, 187, 194, 1);
+            }
+        }
+
+        &>h3 {
+            color: #fff;
+        }
+    }
+}
+
+.meal_orders {
+    padding: 80px 20px;
+
+    &>div {
+        grid-template-columns: 1fr 1.4fr;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    .meal_orders {
+        padding: 20px 0px;
+        gap: 10px;
+        row-gap: 15px;
+    }
+
+    .meale,
+    .meal_orders {
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        &>div {
+            background-size: 105px;
+            padding: 0px 1px;
+            grid-template-columns: 1fr 1.4fr;
+
+            &>div {
+                padding: 5px 6px;
+                height: 124px;
+
+                &>img {
+                    width: 70px !important;
+                    height: 70px !important;
+                }
+
+                &>h3 {
+                    font-size: 8px;
+                    padding: 0px;
+                }
+
+                &>div>h1 {
+                    font-size: 13px !important;
+                    line-height: 17.15px;
+                    margin-bottom: 5px;
+                }
+
+                &>div>p {
+                    font-size: 6px;
+                    line-height: 9.24px;
+                }
+            }
+        }
+    }
+
+    .meal_orders>div>div>img {
+        width: 83px !important;
+        height: 83px !important;
+    }
+
+    .desc_meal {
+        padding: 5px 0px !important;
+    }
+
+    .meale {
+        gap: 20px;
+
+        &>div {
+            grid-template-columns: 1fr 1.4fr;
+            &>div {
+                &:last-of-type {
+                    align-items: flex-start;
+                }
+
+                &>img {
+                    width: 90px !important;
+                    height: 90px !important;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

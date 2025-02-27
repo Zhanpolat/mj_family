@@ -1,0 +1,160 @@
+.header {
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: -0.1px;
+    z-index: 100;
+    background-color: rgb(255, 244, 230);
+
+    &>div>div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 400ms ease-in-out;
+        padding: 0px 20px;
+
+        &>div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+            width: 65%;
+            transition: all 400ms;
+
+            &>ul {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 100%;
+                gap: 50px;
+
+                &>li:first-child {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 50px;
+                }
+
+                &>li>a {
+                    color: black;
+                    text-decoration: none;
+                    width: 100%;
+                    padding: 5px 0px;
+                }
+            }
+        }
+    }
+}
+
+.bron_btn {
+    width: 100%;
+    font-size: 24px;
+    background-color: rgba(114, 0, 18, 1);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.menu_icon {
+    display: none;
+}
+
+@media only screen and (max-width: 450px) {
+    .header {
+        padding: 10px 0px;
+    }
+
+    .header_wrap {
+        padding: 0px !important;
+        &>a>img {
+            width: 104px;
+        }
+
+        &>div {
+
+            &>ul {
+                box-shadow: 0px 0px 12px rgb(0, 0, 0, 0.3);
+                border-bottom-left-radius: 10px;
+                padding: 20px 30px 50px 20px;
+                gap: 15px !important;
+                transition: all 500ms ease-in-out;
+                width: auto !important;
+                opacity: 0;
+                pointer-events: none;
+                visibility: hidden;
+                z-index: -999;
+                flex-direction: column;
+                background-color: #fff;
+                gap: 20px;
+                position: absolute;
+                top: -32px;
+                left: 90px;
+                right: -56px;
+                z-index: 999;
+
+                &>li {
+                    padding: 0px 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: end !important;
+                    gap: 15px !important;
+                    width: 100%;
+
+                    &>a {
+                        text-align: right;
+                        font-size: 28px;
+                        font-weight: 400;
+                        line-height: 29.05px;
+
+                        &>button {
+                            background-color: rgba(249, 201, 47, 1) !important;
+                        }
+                    }
+                }
+
+                &>li:first-child {
+                    align-items: start !important;
+                }
+
+                &>li:last-child {
+                    margin-top: 50px;
+
+                    &>a {
+                        width: 100%;
+
+                        &>button {
+                            padding: 12px 15px !important;
+                            width: 100% !important;
+                            font-size: 16px !important;
+                            font-weight: 600 !important;
+                            line-height: 15.5px !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        &>a:last-child {
+            display: none;
+        }
+    }
+
+    .menu_icon {
+        display: flex;
+        background-color: transparent;
+        border: none;
+    }
+
+    .show {
+        opacity: 1 !important;
+        pointer-events: all !important;
+        visibility: visible !important;
+        z-index: 999 !important;
+        left: 40px !important;
+    }
+}
